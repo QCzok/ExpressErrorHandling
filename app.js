@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var fibonacciRouter = require('./routes/fibonacci');
 var fibsyn = require('./routes/fibsyn');
 var fibasyn = require('./routes/fibasyn');
@@ -25,7 +24,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/fibonacci', fibonacciRouter);
 app.use('/fibsyn', fibsyn);
 app.use('/fibasyn', fibasyn);

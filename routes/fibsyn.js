@@ -2,9 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
-    var e = new Error('No number');
+    var e = new Error('No number was given');
+    e.status = 400;
     next(e);
-});
+  });
 
 
 router.get('/:number', function (req, res, next) {
